@@ -1,0 +1,12 @@
+{
+	"name" : "rifki/youtubeID",
+	"description" : "Get Youtube ID and displaying thumbnail",
+	"type" : "library",
+	"keywords": ["youtube", "thumbnail"],
+	"authors": [
+        {
+            "name": "Muhamad Rifki",
+            "email": "rifki@rifkilabs.net",
+        }
+    ]
+}
