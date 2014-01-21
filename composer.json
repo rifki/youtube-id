@@ -1,5 +1,5 @@
 {
-	"name" : "rifki/youtubeID",
+	"name" : "rifki/youtube-id",
 	"description" : "Get Youtube ID and displaying thumbnail",
 	"type" : "library",
 	"keywords": ["youtube", "thumbnail"],
