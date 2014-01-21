@@ -3,10 +3,11 @@
 	"description" : "Get Youtube ID and displaying thumbnail",
 	"type" : "library",
 	"keywords": ["youtube", "thumbnail"],
+	"homepage": "http://github.com/rifki/youtube-id",
 	"authors": [
-        {
+   	   {
             "name": "Muhamad Rifki",
             "email": "rifki@rifkilabs.net"
-        }
+           }
 	]
 }
