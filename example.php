@@ -3,15 +3,18 @@
     <input type="submit" name="submit" value="submit">
 </form>
 
-<hr />
+<hr />	
 
-<?php require_once 'youtubeID.php';
-if (isset($_POST['submit'])) : ?>
-	
-	<?php $id = $_POST['video']; ?>
-	<p>Youtube ID: <?php echo YoutubeID::getVideoID($id); ?></p>
-	<p>Image: <br /><img src="<?php echo YoutubeID::thumbImg($id, 3, 'small') ?>"></p>
-	<p>Video: </p>
-	<iframe width="420" height="315" src="//www.youtube.com/embed/<?php echo YoutubeID::getVideoID($id); ?>" frameborder="0" allowfullscreen></iframe>
+<?php 
+require_once 'src/youtubeID.php';
 
-<?php endif; ?>
+if (isset($_POST['submit'])) {
+
+	$url = trim($_POST['video']); 
+	$id = YoutubeID::getVideoID($url);
+
+	echo "Youtube ID : $id <br />";
+	echo "Image : <br /> <img src='".YoutubeID::getThumbs($id)."'> <br />";
+	echo "Video : <br /> ".YoutubeID::getEmbed($id, 560, 315);
+}
+?>
