@@ -1,4 +1,6 @@
-Get Youtube ID and displaying thumbnail
-======================================
+youtube-id
+=========
 
-See example.php for example use
+Get Youtube ID, displaying thumbnail and embed video from Youtube
+
+Learn more: example.php
