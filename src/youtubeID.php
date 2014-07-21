@@ -46,7 +46,7 @@ class YoutubeID
     {
         if (self::isValidURL($url)) {
             $part = parse_url($url);
-            if ( strpos($url, trim('youtube')) ) {
+            if ( strpos($url, trim('youtube')) || strpos($url, trim('youtu.be')) ) {
                 if ( strpos($url, 'v=') ) {
                     return substr( $part['query'],  strpos($part['query'], 'v=') + 2, 11 );
                 }
@@ -58,7 +58,7 @@ class YoutubeID
                 }
                 elseif ( strpos($url, trim('youtu.be') ) || strpos($url, trim('www.youtu.be')) ) {
                     if (strpos($url, '/'))
-                        return substr( $part['path'], strpos($part['path'], '/') + 1, 11 );
+                    return substr( $part['path'], strpos($part['path'], '/') + 1, 11 );
                 }
                 elseif (strpos($url, '/embed/')) {
                     return substr( $part['path'], strpos($part['path'], '/embed/') + 7, 11);
